@@ -1,0 +1,33 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - VARIABLES + MIXINS
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - COLORS
+
+@black: #000;
+
+@white: #fff;
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SHORTCUTS
+
+.border-radius(@radius: 5px) {
+-webkit-border-radius: @radius;
+   -moz-border-radius: @radius;
+	 -o-border-radius: @radius;
+		border-radius: @radius;
+}
+
+.box-shadow (@shadow1, @shadow2: transparent 0 0 0 ) {
+    -moz-box-shadow: @shadow1, @shadow2;
+    -webkit-box-shadow: @shadow1, @shadow2;
+    box-shadow: @shadow1, @shadow2;
+}
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+		 -o-transition: @transition;
+			transition: @transition;
+}
