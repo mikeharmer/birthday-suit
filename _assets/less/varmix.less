@@ -31,3 +31,24 @@
 		 -o-transition: @transition;
 			transition: @transition;
 }
+
+.multi-transition(@transition1, @transition2) {
+	-webkit-transition: @transition1, @transition2;
+	   -moz-transition: @transition1, @transition2;
+		 -o-transition: @transition1, @transition2;
+			transition: @transition1, @transition2;
+}
+
+.bg-cover() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.backface-visibility(@visibility){
+	-webkit-backface-visibility: @visibility;
+	   -moz-backface-visibility: @visibility;
+	    -ms-backface-visibility: @visibility;
+	        backface-visibility: @visibility;
+}
