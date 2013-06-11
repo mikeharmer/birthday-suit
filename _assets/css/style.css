@@ -238,7 +238,7 @@ section {
 [class*="column"] + [class*="column"].end {
   float: left;
 }
-@media screen and (min-width: 1024px) {
+@media screen, (min-width: 1024px) {
   header,
   footer,
   section {
@@ -296,18 +296,21 @@ section {
 .clearfix {
   zoom: 1;
 }
-@media screen and (min-width: 480px) {
+.translate-fix {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+@media screen, (min-width: 480px) {
   
 }
-@media screen and (min-width: 768px) {
+@media screen, (min-width: 768px) {
   
 }
-@media screen and (min-width: 1024px) {
+@media screen, (min-width: 1024px) {
   
 }
-@media screen and (min-width: 1220px) {
+@media screen, (min-width: 1220px) {
   
 }
-@media screen and (min-width: 1420px) {
+@media screen, (min-width: 1420px) {
   
 }

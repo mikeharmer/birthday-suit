@@ -2,11 +2,43 @@
 
 
 
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - BREAKPOINTS
+
+@phone: ~"only screen and (min-width: 480px)";
+
+@tabletp: ~"only screen and (min-width: 768px)";
+
+@tabletl: ~"only screen and (min-width: 1024px)";
+
+@laptop: ~"only screen and (min-width: 1220px)";
+
+@desktop: ~"only screen and (min-width: 1420px)";
+
+@media @phone {
+}
+
+@media @tabletp {
+}
+
+@media @tabletl {
+}
+
+@media @laptop {
+}
+
+@media @desktop {
+}
+
+
+
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - COLORS
 
 @black: #000;
 
 @white: #fff;
+
 
 
 
@@ -46,9 +78,10 @@
 	background-size: cover;
 }
 
-.backface-visibility(@visibility){
-	-webkit-backface-visibility: @visibility;
-	   -moz-backface-visibility: @visibility;
-	    -ms-backface-visibility: @visibility;
-	        backface-visibility: @visibility;
+.backface-fix() {
+	-webkit-backface-visibility: hidden;
+}
+
+.translate-fix {
+	-webkit-transform: translate3d(0, 0, 0);
 }
