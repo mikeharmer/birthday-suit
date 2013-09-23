@@ -12,9 +12,20 @@ header, footer, section {
 	max-width: 980px;
 	margin: 0 auto;
 	padding: 0;
+
+	.row {
+		width: auto;
+		max-width: none;
+		min-width: 0;
+		padding: 0;
+	}
 }
 
-.column, .columns {
+.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+
+.column {
 	position: relative;
 	float: left;
 	width: 100%;
@@ -22,10 +33,11 @@ header, footer, section {
 	padding: 0 20px;
 }
 
-.row .row { width: auto; max-width: none; min-width: 0; padding: 0; }
-
 [class*="column"] + [class*="column"]:last-child { float: right; }
-[class*="column"] + [class*="column"].end { float: left; }
+
+.row.cols-left .column {
+	float: left;
+}
 
 @media @tabletl {
 
@@ -47,7 +59,3 @@ header, footer, section {
 	.row .twelve 	{ width: 100%; }
 
 }
-
-.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
-.row:after, .clearfix:after { clear: both; }
-.row, .clearfix { zoom: 1; }

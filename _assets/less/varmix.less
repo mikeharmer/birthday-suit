@@ -15,6 +15,8 @@
 
 @desktop: ~"only screen and (min-width: 1420px)";
 
+@retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
 @media @phone {
 }
 
@@ -28,6 +30,9 @@
 }
 
 @media @desktop {
+}
+
+@media @retina {
 }
 
 
@@ -79,9 +84,14 @@
 }
 
 .backface-fix() {
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
 }
 
-.translate-fix {
+.translate-fix() {
+	transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
 }
