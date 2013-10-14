@@ -26,7 +26,7 @@
 
 
 
-<body>
+<body class="<?php echo $bodyclass; ?>">
 
 
 
